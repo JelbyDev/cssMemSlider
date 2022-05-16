@@ -50,6 +50,15 @@ body {
 .mem-slides-list__item {
   width: 25%;
 }
+.mem-slides-list__item--img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mem-slides-list__item--img img {
+  display: block;
+  width: 100%;
+}
 
 .mem-slider-nav {
   width: 100%;
