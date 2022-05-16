@@ -1,0 +1,122 @@
+﻿* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 10px;
+  min-width: 320px;
+}
+
+.mem-slider {
+  width: 100%;
+  max-width: 70rem;
+  padding: 1.2rem;
+  gap: 1.2rem 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: #3a3a3a;
+  border-radius: 0.8rem;
+  box-shadow: 0px 0px 6px 3px rgb(0, 0, 0, 0.5);
+}
+.mem-slider__radio {
+  display: none;
+}
+
+.mem-slider-list {
+  overflow: hidden;
+}
+.mem-slider-list--img {
+  border-radius: 0.8rem;
+  width: 100%;
+}
+.mem-slider-list--text {
+  width: 100%;
+  font-size: 1rem;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.mem-slider-list__wrapper {
+  display: flex;
+  width: 400%;
+  transition: transform 0.7s;
+}
+.mem-slides-list__item {
+  width: 25%;
+}
+.mem-slides-list__item--img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mem-slides-list__item--img img {
+  display: block;
+  width: 100%;
+}
+
+.mem-slider-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mem-slider-nav__item {
+  cursor: pointer;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mem-slider-nav__item span {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: #fff;
+  border-radius: 50%;
+  border: 0.16rem solid #fff;
+}
+.mem-slider-nav__item:hover span {
+  background: #97a6ff;
+}
+
+@media (min-width: 600px) {
+  .mem-slider {
+    flex-direction: row;
+  }
+  .mem-slider-list--text {
+    width: calc(100% - 1.5rem - 1.7rem * 4);
+    order: 1;
+  }
+  .mem-slider-nav {
+    order: 2;
+    width: auto;
+    padding-left: 1.5rem;
+    justify-content: flex-end;
+  }
+}
+
+/* Changing the slide */
+#slide-1:checked ~ .mem-slider-nav .mem-slider-nav__item[for="slide-1"] span {
+  background: #3f3cff;
+}
+#slide-2:checked ~ .mem-slider-list .mem-slider-list__wrapper {
+  transform: translateX(-25%);
+}
+#slide-2:checked ~ .mem-slider-nav .mem-slider-nav__item[for="slide-2"] span {
+  background: #3f3cff;
+}
+#slide-3:checked ~ .mem-slider-list .mem-slider-list__wrapper {
+  transform: translateX(-50%);
+}
+#slide-3:checked ~ .mem-slider-nav .mem-slider-nav__item[for="slide-3"] span {
+  background: #3f3cff;
+}
+#slide-4:checked ~ .mem-slider-list .mem-slider-list__wrapper {
+  transform: translateX(-75%);
+}
+#slide-4:checked ~ .mem-slider-nav .mem-slider-nav__item[for="slide-4"] span {
+  background: #3f3cff;
+}
