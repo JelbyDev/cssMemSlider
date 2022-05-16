@@ -7,5 +7,58 @@
     <link rel="stylesheet" href="./style.css" />
     <title>css mem slider task</title>
   </head>
-  <body></body>
+  <body>
+    <div class="mem-slider">
+      <input
+        class="mem-slider__radio"
+        type="radio"
+        name="selectedSlide"
+        id="slide-1"
+        checked="checked"
+      />
+      <input
+        class="mem-slider__radio"
+        type="radio"
+        name="selectedSlide"
+        id="slide-2"
+      />
+      <input
+        class="mem-slider__radio"
+        type="radio"
+        name="selectedSlide"
+        id="slide-3"
+      />
+      <input
+        class="mem-slider__radio"
+        type="radio"
+        name="selectedSlide"
+        id="slide-4"
+      />
+
+      <div class="mem-slider-list mem-slider-list--img">
+        <div class="mem-slider-list__wrapper">
+          <div class="mem-slides-list__item" style="height: 300px">1</div>
+          <div class="mem-slides-list__item" style="height: 300px">2</div>
+          <div class="mem-slides-list__item" style="height: 300px">3</div>
+          <div class="mem-slides-list__item" style="height: 300px">4</div>
+        </div>
+      </div>
+
+      <div class="mem-slider-list mem-slider-list--text">
+        <div class="mem-slider-list__wrapper">
+          <div class="mem-slides-list__item">текст 1</div>
+          <div class="mem-slides-list__item">текст 2</div>
+          <div class="mem-slides-list__item">текст 3</div>
+          <div class="mem-slides-list__item">текст 4</div>
+        </div>
+      </div>
+
+      <div class="mem-slider-nav">
+        <label class="mem-slider-nav__item" for="slide-1">1</label>
+        <label class="mem-slider-nav__item" for="slide-2">2</label>
+        <label class="mem-slider-nav__item" for="slide-3">3</label>
+        <label class="mem-slider-nav__item" for="slide-4">4</label>
+      </div>
+    </div>
+  </body>
 </html>
